@@ -43,12 +43,7 @@ function M.variableLog()
 	local varname = getVar()
 	local logLines = u.getTemplateStr("variableLog", config.logStatements)
 	if not logLines then return end
-	-- check if we have 2 or 3 placeholders like "%s %s: %s"
-	if logLines[1]:match("%%s.*%%s.*%%s") then
-		u.appendLines(logLines, { config.marker, varname, varname })
-	else
-		u.appendLines(logLines, { varname, varname })
-	end
+	u.appendLines(logLines, { config.marker, varname, varname })
 end
 
 function M.objectLog()

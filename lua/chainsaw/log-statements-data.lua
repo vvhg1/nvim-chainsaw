@@ -11,7 +11,7 @@ return {
 	variableLog = { -- %s -> 1st: marker, 2nd: variable, 3rd: variable
 		lua = 'print("%s %s: ", %s)',
 		nvim_lua = 'vim.notify("%s %s: " .. tostring(%s))', -- not using `print` due to noice.nvim https://github.com/folke/noice.nvim/issues/556
-		python = 'print(f"%s: {%s}")',
+		python = 'print(f"%s %s: {%s}")',
 		javascript = 'console.log("%s %s:", %s);',
 		typescript = 'console.log("%s %s:", %s);',
 		typescriptreact = 'console.log("%s %s:", %s);',
