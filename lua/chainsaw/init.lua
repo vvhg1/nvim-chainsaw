@@ -49,7 +49,6 @@ function M.variableLog()
 	else
 		u.appendLines(logLines, { varname, varname })
 	end
-	u.appendLines(logLines, { config.marker, varname, varname })
 end
 
 function M.objectLog()
